@@ -1,0 +1,7 @@
+.transition-container {
+    transition: all 0.6s ease-in-out;
+  }
+  .signup-mode .side-panel {
+    background-color: #6610f2 !important;
+  }
+  

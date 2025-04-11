@@ -1,0 +1,44 @@
+mkdir backend
+npm init -y
+npm install express mongoose cors dotenv bcryptjs jsonwebtoken
+npm install -D typescript ts-node @types/node @types/express @types/cors @types/bcryptjs @types/jsonwebtoken
+npx tsc --init
+npm install -D ts-node-dev
+npm install -D @types/express
+
+
+
+npm install express mongoose cors dotenv
+npm install -D typescript ts-node-dev @types/express @types/node
+
+
+npm uninstall express @types/express
+npm install express@4
+npm install -D @types/express@4
+
+
+
+
+🧨 สาเหตุ: คุณใช้ Express เวอร์ชัน 5 (beta)
+json
+คัดลอก
+แก้ไข
+"express": "^5.1.0"
+ซึ่ง Express v5 มีการเปลี่ยนแปลงรูปแบบการเขียน Router และ Type ที่ใช้กับ Request, Response
+แต่ @types/express@5 ยังไม่สมบูรณ์ 100% → ทำให้ TypeScript แสดง error แปลก ๆ
+
+✅ ทำไมพอ Downgrade เป็น Express 4 แล้วหาย?
+เพราะ:
+
+Express v4 ทำงานร่วมกับ TypeScript ได้สมบูรณ์
+
+Type ของ Request, Response, และ Router ตรงกันพอดี
+
+@types/express@4 คือเวอร์ชันที่เสถียรและทีม Express แนะนำให้ใช้ใน production ปัจจุบัน
+
+
+
+
+
+npm install bcryptjs
+npm install -D @types/bcryptjs
